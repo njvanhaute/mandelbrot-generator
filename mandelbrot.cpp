@@ -11,7 +11,7 @@
 bool isInSet(double real, double imag) {
     std::complex<double> z(0, 0);
     std::complex<double> c(real, imag);
-    for (int i = 0; i < MAX_ITERATIONS; i++) {
+    for (int i = 0; i < constants::MAX_ITERATIONS; i++) {
         z = z * z + c;
         if (abs(z) > 2) {
             return false;
