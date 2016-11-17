@@ -11,7 +11,6 @@
 #include "graphics.hpp"
 #include "globals.hpp"
 
-
 int main(int argc, const char *argv[]) {
     Graphics graphics;
     bool quit = false;
