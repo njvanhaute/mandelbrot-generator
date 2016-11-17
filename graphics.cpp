@@ -26,7 +26,7 @@ Graphics::~Graphics() {
 }
 
 void Graphics::updateTexture(Uint32 *pixels) {
-    SDL_UpdateTexture(_texture, NULL, pixels, 640 * sizeof(Uint32));
+    SDL_UpdateTexture(_texture, NULL, pixels, WINDOW_WIDTH * sizeof(Uint32));
 }
 
 void Graphics::render() {

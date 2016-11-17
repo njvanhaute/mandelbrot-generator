@@ -6,8 +6,11 @@
 //  Copyright © 2016 Nicholas Vanhaute. All rights reserved.
 //
 
+#include <string.h>
+#include <stdio.h>
 #include "graphics.hpp"
 #include "globals.hpp"
+
 
 int main(int argc, const char *argv[]) {
     Graphics graphics;
