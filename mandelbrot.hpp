@@ -9,9 +9,17 @@
 #ifndef mandelbrot_hpp
 #define mandelbrot_hpp
 
+#include <SDL2/SDL.h>
 #include <complex>
 #include "globals.hpp"
 
+typedef struct Point_struct {
+    double x;
+    double y;
+} Point;
+
 bool isInSet(double real, double imag);
+Point GetPoint(Uint32 pixel);
+Point NormalizePoint(Point matPoint);
 
 #endif /* mandelbrot_hpp */

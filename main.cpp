@@ -6,17 +6,19 @@
 //  Copyright © 2016 Nicholas Vanhaute. All rights reserved.
 //
 
-#include <string.h>
 #include <stdio.h>
 #include "graphics.hpp"
 #include "globals.hpp"
+#include "pixels.hpp"
 
 int main(int argc, const char *argv[]) {
     Graphics graphics;
     bool quit = false;
     SDL_Event eventHandler;
     Uint32 *pixels = new Uint32[constants::WINDOW_WIDTH * constants::WINDOW_HEIGHT];
-    memset(pixels, 255, constants::WINDOW_WIDTH * constants::WINDOW_HEIGHT * sizeof(Uint32));
+    initPixels(pixels);
+    addAxes(pixels);
+    GenerateSet(pixels);
     while (!quit) {
         graphics.updateTexture(pixels);
         SDL_WaitEvent(&eventHandler);
