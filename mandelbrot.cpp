@@ -5,25 +5,26 @@
 //  Created by Nicholas Vanhaute on 11/17/16.
 //  Copyright © 2016 Nicholas Vanhaute. All rights reserved.
 //
+// (i * 20) % 255 is a good one
 
 #include "mandelbrot.hpp"
 
-bool isInSet(double real, double imag) {
+int isInSet(double real, double imag) {
     std::complex<double> z(0.0, 0.0);
     std::complex<double> c(real, imag);
-    for (int i = 0; i < constants::MAX_ITERATIONS; i++) {
+    for (int i = 1; i <= constants::MAX_ITERATIONS; i++) {
         z = z * z + c;
         if (abs(z) > 2) {
-            return false;
+            return (i * 20) % 255;
         }
     }
-    return true;
+    return 0;
 }
 
 Point GetPoint(int j) {
     Point point;
-    point.x = j / constants::WINDOW_HEIGHT;
-    point.y = j % constants::WINDOW_WIDTH;
+    point.x = j % constants::WINDOW_WIDTH;
+    point.y = j / constants::WINDOW_WIDTH;
     return point;
 }
 
@@ -31,7 +32,7 @@ Point GetPoint(int j) {
 Point NormalizePoint(Point matPoint) {
     Point normalizedPoint;
     normalizedPoint = matPoint;
-    normalizedPoint.x = constants::REAL_LOWER_LIMIT + matPoint.y * (4.0 / constants::WINDOW_HEIGHT);
-    normalizedPoint.y = constants::IMAG_UPPER_LIMIT - matPoint.x * (4.0 / constants::WINDOW_WIDTH);
+    normalizedPoint.x = constants::REAL_LOWER_LIMIT + matPoint.x * ((constants::REAL_UPPER_LIMIT - constants::REAL_LOWER_LIMIT) / constants::WINDOW_WIDTH);
+    normalizedPoint.y = constants::IMAG_UPPER_LIMIT - matPoint.y * ((constants::IMAG_UPPER_LIMIT - constants::IMAG_LOWER_LIMIT) / constants::WINDOW_HEIGHT);
     return normalizedPoint;
 }

@@ -24,9 +24,8 @@ void addAxes(Uint32 *pixels) {
 void GenerateSet(Uint32 *pixels) {
     for (int j = 0; j < constants::WINDOW_WIDTH * constants::WINDOW_HEIGHT; j++) {
         Point xyPoint = GetPoint(j);
+        //printf("DEBUG: For int %d, x = %.2lf, y = %.2lf\n", j, xyPoint.x, xyPoint.y);
         xyPoint = NormalizePoint(xyPoint);
-        if (isInSet(xyPoint.x, xyPoint.y)) {
-            pixels[j] = 0;
-        }
+        pixels[j] = isInSet(xyPoint.x, xyPoint.y);
     }
 }
