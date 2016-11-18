@@ -19,7 +19,7 @@ typedef struct Point_struct {
 } Point;
 
 bool isInSet(double real, double imag);
-Point GetPoint(Uint32 pixel);
+Point GetPoint(int j);
 Point NormalizePoint(Point matPoint);
 
 #endif /* mandelbrot_hpp */

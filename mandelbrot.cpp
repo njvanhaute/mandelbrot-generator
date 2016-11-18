@@ -20,10 +20,10 @@ bool isInSet(double real, double imag) {
     return true;
 }
 
-Point GetPoint(Uint32 pixel) {
+Point GetPoint(int j) {
     Point point;
-    point.x = pixel / 640;
-    point.y = pixel % 640;
+    point.x = j / constants::WINDOW_HEIGHT;
+    point.y = j % constants::WINDOW_WIDTH;
     return point;
 }
 
@@ -31,7 +31,7 @@ Point GetPoint(Uint32 pixel) {
 Point NormalizePoint(Point matPoint) {
     Point normalizedPoint;
     normalizedPoint = matPoint;
-    normalizedPoint.x = -2.0 + matPoint.y * (1.0 / 160);
-    normalizedPoint.y = 2.0 - matPoint.x * (1.0 / 160);
+    normalizedPoint.x = constants::REAL_LOWER_LIMIT + matPoint.y * (4.0 / constants::WINDOW_HEIGHT);
+    normalizedPoint.y = constants::IMAG_UPPER_LIMIT - matPoint.x * (4.0 / constants::WINDOW_WIDTH);
     return normalizedPoint;
 }

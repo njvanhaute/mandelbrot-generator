@@ -3,7 +3,15 @@ This is a simple project designed to generate and render the Mandelbrot set usin
 
 Fractal geometry has always been particularly interesting to me, so this project serves as a way to both deepen my understanding of the Mandelbrot set and improve my programming skills.
 
+# 11/18/2016
+I've made some real progress in the past day on this project, and I finally got my first working image with the program:
+
+![alt tag](http://i.imgur.com/OGuFhS8.png)
+
+At the moment, there are still quite a few bugs that occur when I attempt to change the window dimensions. These are most likely due to errors I made when attempting to normalize the grid of pixels to the complex plane.
 
 Although it will be a lot of hard work and learning, my goal for the project is to one day produce images such as this:
 
 ![alt tag](http://img04.deviantart.net/f515/i/2013/167/0/1/mandelbrot_set_zoom_in_4k__by_seryzone-d698sw7.jpg)
+
+

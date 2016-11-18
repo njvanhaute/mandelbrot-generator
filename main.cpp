@@ -19,15 +19,15 @@ int main(int argc, const char *argv[]) {
     initPixels(pixels);
     addAxes(pixels);
     GenerateSet(pixels);
+    graphics.updateTexture(pixels);
+    graphics.render();
     while (!quit) {
-        graphics.updateTexture(pixels);
         SDL_WaitEvent(&eventHandler);
         switch(eventHandler.type) {
             case SDL_QUIT :
                 quit = true;
                 break;
         }
-        graphics.render();
     }
     delete[] pixels;
     return 0;

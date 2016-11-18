@@ -12,11 +12,11 @@
 namespace constants {
     const unsigned int WINDOW_WIDTH   = 640;
     const unsigned int WINDOW_HEIGHT  = 640;
-    const unsigned int MAX_ITERATIONS =   5;
-    const int REAL_LOWER_LIMIT = -2;
-    const int REAL_UPPER_LIMIT =  2;
-    const int IMAG_LOWER_LIMIT = -2;
-    const int IMAG_UPPER_LIMIT =  2;
+    const unsigned int MAX_ITERATIONS =  500;
+    const double REAL_LOWER_LIMIT = -2.0;
+    const double REAL_UPPER_LIMIT =  2.0;
+    const double IMAG_LOWER_LIMIT = -2.0;
+    const double IMAG_UPPER_LIMIT =  2.0;
 }
 
 #endif /* globals_hpp */
