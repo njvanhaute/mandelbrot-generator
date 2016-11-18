@@ -18,7 +18,7 @@ typedef struct Point_struct {
     double y;
 } Point;
 
-int isInSet(double real, double imag);
+Uint32 isInSet(double real, double imag);
 Point GetPoint(int j);
 Point NormalizePoint(Point matPoint);
 
