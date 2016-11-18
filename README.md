@@ -16,6 +16,8 @@ As of right now, my program can produce images such as the following:
 
 ![alt tag](http://i.imgur.com/s8E1wsJ.png)
 
+![alt tag](http://i.imgur.com/c4Hdzyf.jpg)
+
 Although it will be a lot of hard work and learning, my goal for the project is to one day produce images such as this:
 
 ![alt tag](http://img04.deviantart.net/f515/i/2013/167/0/1/mandelbrot_set_zoom_in_4k__by_seryzone-d698sw7.jpg)
