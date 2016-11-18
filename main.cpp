@@ -7,9 +7,12 @@
 //
 
 #include <stdio.h>
+#include <iostream>
 #include "graphics.hpp"
 #include "globals.hpp"
 #include "pixels.hpp"
+
+bool saveScreenshotBMP(std::string filepath, SDL_Window* SDLWindow, SDL_Renderer* SDLRenderer);
 
 int main(int argc, const char *argv[]) {
     Graphics graphics;
@@ -21,6 +24,9 @@ int main(int argc, const char *argv[]) {
     GenerateSet(pixels);
     graphics.updateTexture(pixels);
     graphics.render();
+    if (!graphics.PrintScreen("mandelbrot.bmp")) {
+        printf("Error: Could not write to file 'mandelbrot.bmp'\n");
+    }
     while (!quit) {
         SDL_WaitEvent(&eventHandler);
         switch(eventHandler.type) {

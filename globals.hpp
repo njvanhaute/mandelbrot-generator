@@ -10,8 +10,8 @@
 #define GLOBALS_HPP
 
 namespace constants {
-    const unsigned int WINDOW_WIDTH   =  1000;
-    const unsigned int WINDOW_HEIGHT  =  1000;
+    const unsigned int WINDOW_WIDTH   =  640;
+    const unsigned int WINDOW_HEIGHT  =  640;
     const unsigned int MAX_ITERATIONS =  1000;
     const double REAL_LOWER_LIMIT = -2.0;
     const double REAL_UPPER_LIMIT =  2.0;

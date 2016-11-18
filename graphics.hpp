@@ -10,6 +10,7 @@
 #define GRAPHICS_HPP
 
 #include <SDL2/SDL.h>
+#include <iostream>
 #include "globals.hpp"
 
 class Graphics {
@@ -20,8 +21,14 @@ private:
 public:
     Graphics();
     ~Graphics();
+    SDL_Texture *getTexture();
+    SDL_Window *getWindow();
+    SDL_Renderer *getRenderer();
+    bool PrintScreen(std::string filepath);
     void updateTexture(Uint32 *pixels);
     void render();
 };
+
+bool saveScreenshotBMP(std::string filepath, SDL_Window* SDLWindow, SDL_Renderer* SDLRenderer);
 
 #endif /* GRAPHICS_HPP */
