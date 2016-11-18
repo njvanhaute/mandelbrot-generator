@@ -18,6 +18,8 @@ private:
     SDL_Texture *_texture;
     SDL_Window *_window;
     SDL_Renderer *_renderer;
+    SDL_Color *_colors;
+    SDL_Palette *_palette;
 public:
     Graphics();
     ~Graphics();
@@ -27,6 +29,8 @@ public:
     bool PrintScreen(std::string filepath);
     void updateTexture(Uint32 *pixels);
     void render();
+    void initColors();
+    void initPalette();
 };
 
 bool saveScreenshotBMP(std::string filepath, SDL_Window* SDLWindow, SDL_Renderer* SDLRenderer);

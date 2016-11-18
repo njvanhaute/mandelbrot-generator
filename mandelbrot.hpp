@@ -6,8 +6,8 @@
 //  Copyright © 2016 Nicholas Vanhaute. All rights reserved.
 //
 
-#ifndef mandelbrot_hpp
-#define mandelbrot_hpp
+#ifndef MANDELBROT_HPP
+#define MANDELBROT_HPP
 
 #include <SDL2/SDL.h>
 #include <complex>
@@ -22,4 +22,4 @@ Uint32 isInSet(double real, double imag);
 Point GetPoint(int j);
 Point NormalizePoint(Point matPoint);
 
-#endif /* mandelbrot_hpp */
+#endif /* MANDELBROT_HPP */

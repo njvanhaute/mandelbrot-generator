@@ -51,6 +51,14 @@ void Graphics::render() {
     SDL_RenderPresent(_renderer);
 }
 
+void Graphics::initColors() {
+    // To be implemented...
+}
+
+void Graphics::initPalette() {
+    // To be implemented...
+}
+
 bool saveScreenshotBMP(std::string filepath, SDL_Window* SDLWindow, SDL_Renderer* SDLRenderer) {
     SDL_Surface* saveSurface = NULL;
     SDL_Surface* infoSurface = NULL;
