@@ -15,7 +15,7 @@ Uint32 isInSet(double real, double imag) {
     for (Uint32 i = 1; i <= constants::MAX_ITERATIONS; i++) {
         z = z * z + c;
         if (abs(z) > 2) {
-            return (i % 30) * 100000;
+            return (i * 20000000) % 10000000 + (10000 * i);
         }
     }
     return 0;
