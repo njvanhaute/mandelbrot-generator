@@ -20,7 +20,6 @@ int main(int argc, const char *argv[]) {
     SDL_Event eventHandler;
     Uint32 *pixels = new Uint32[constants::WINDOW_WIDTH * constants::WINDOW_HEIGHT];
     initPixels(pixels);
-    addAxes(pixels);
     GenerateSet(pixels);
     graphics.updateTexture(pixels);
     graphics.render();
