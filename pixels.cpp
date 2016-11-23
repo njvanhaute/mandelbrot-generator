@@ -28,3 +28,9 @@ void GenerateSet(Uint32 *pixels) {
         pixels[j] = isInSet(xyPoint.x, xyPoint.y);
     }
 }
+
+void AddWeirdEffect(Uint32 *pixels) {
+    for (int j = 1; j < constants::WINDOW_WIDTH * constants::WINDOW_HEIGHT; j++) {
+        pixels[j] = (pixels[j - 1] + pixels[j]) / 2;
+    }
+}

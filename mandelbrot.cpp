@@ -12,15 +12,13 @@
 Uint32 isInSet(double real, double imag) {
     std::complex<double> z(0.0, 0.0);
     std::complex<double> c(real, imag);
-    const std::complex<double> JULIA_CONSTANT(-0.4, 0.6);
-    z = c;
     for (Uint32 i = 1; i <= constants::MAX_ITERATIONS; i++) {
-        z = z * z + JULIA_CONSTANT;
+        z = pow(z, 2) + c;
         if (abs(z) > 2) {
-            return (constants::COLOR_WHITE) - i * i + i * 200;
+            return (constants::COLOR_WHITE) - i * i + 200 * i;
         }
     }
-    return constants::COLOR_WHITE;
+    return 0;
 }
 
 Point GetPoint(int j) {

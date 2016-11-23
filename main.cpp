@@ -21,6 +21,7 @@ int main(int argc, const char *argv[]) {
     Uint32 *pixels = new Uint32[constants::WINDOW_WIDTH * constants::WINDOW_HEIGHT];
     initPixels(pixels);
     GenerateSet(pixels);
+    //addAxes(pixels);
     graphics.updateTexture(pixels);
     graphics.render();
     if (!graphics.PrintScreen("mandelbrot.bmp")) {

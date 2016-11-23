@@ -11,6 +11,7 @@
 
 #include <SDL2/SDL.h>
 #include <complex>
+#include <math.h>
 #include "globals.hpp"
 
 typedef struct Point_struct {

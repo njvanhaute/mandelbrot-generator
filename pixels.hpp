@@ -17,5 +17,6 @@
 void initPixels(Uint32 *pixels);
 void addAxes(Uint32 *pixels);
 void GenerateSet(Uint32 *pixels);
+void AddWeirdEffect(Uint32 *pixels);
 
 #endif /* PIXELS_HPP */
