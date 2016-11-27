@@ -9,13 +9,13 @@
 
 #include "mandelbrot.hpp"
 
-Uint32 isInSet(double real, double imag) {
+Uint32 isInSet(double real, double imag, Uint32* palette) {
     std::complex<double> z(0.0, 0.0);
     std::complex<double> c(real, imag);
     for (Uint32 i = 1; i <= constants::MAX_ITERATIONS; i++) {
         z = pow(z, 2) + c;
         if (abs(z) > 2) {
-            return (constants::COLOR_WHITE) - i * i + 200 * i;
+            return palette[i * 1000];
         }
     }
     return 0;
@@ -30,8 +30,7 @@ Point GetPoint(int j) {
 
 // Allow point to lie in the dimensions specified in globals.hpp
 Point NormalizePoint(Point matPoint) {
-    Point normalizedPoint;
-    normalizedPoint = matPoint;
+    Point normalizedPoint = matPoint;
     normalizedPoint.x = constants::REAL_LOWER_LIMIT + matPoint.x * ((constants::REAL_UPPER_LIMIT - constants::REAL_LOWER_LIMIT) / constants::WINDOW_WIDTH);
     normalizedPoint.y = constants::IMAG_UPPER_LIMIT - matPoint.y * ((constants::IMAG_UPPER_LIMIT - constants::IMAG_LOWER_LIMIT) / constants::WINDOW_HEIGHT);
     return normalizedPoint;

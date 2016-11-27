@@ -13,10 +13,14 @@
 #include <string.h>
 #include "globals.hpp"
 #include "mandelbrot.hpp"
+#include "helperfunctions.hpp"
+#include <math.h>
 
 void initPixels(Uint32 *pixels);
 void addAxes(Uint32 *pixels);
-void GenerateSet(Uint32 *pixels);
+void GenerateSet(Uint32 *pixels, Uint32 *palette);
 void AddWeirdEffect(Uint32 *pixels);
+void AllColors(Uint32 *pixels);
+void GeneratePalette(Uint32 *palette);
 
 #endif /* PIXELS_HPP */
